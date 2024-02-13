@@ -1,0 +1,39 @@
+Margot is a 32 years old woman, her shoe size is 38 and her pants size is 40. She is married 
+to Arthur, with whom she has two children: Simon and Marie. Margot is a teacher; Alice and 
+Pierre are her colleagues. Her mother is called Simone.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix shortcut: <http://inria.fr/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://inria.fr/data#Margot> a shortcut:woman ,  a shortcut:teacher,
+shortcut:age "32"^^xsd:integer;
+shortcut:shoesize "38"^^xsd:integer;
+shortcut:pantsize "40"^^xsd:integer;
+shortcut:hasSpouse <http://ns.inria.fr/Arthur>;
+shortcut:haschild  <http://ns.inria.fr/Simon>;
+shortcut:haschild  <http://ns.inria.fr/Marie>;
+shortcut:mother <http://ns.inria.fr/Simone>;
+shortcut:colleagues <http://ns.inria.fr/Alice>;
+shortcut:colleagues <http://ns.inria.fr/Pierre>;
+shprtcut:name "margot"^^xsd:string.
+
+<http://ns.inria.fr/Arthur> a shortcut:man,
+shortcut:haschild  <http://ns.inria.fr/Simon>;
+shortcut:haschild  <http://ns.inria.fr/Marie>;
+shortcut:name "Arthur"^^xsd:string.
+
+<http://ns.inria.fr/Simone> a shortcut:woman,
+shprtcut:name "simone"^^xsd:string.
+
+<http://ns.inria.fr/Marie> a shortcut:woman,
+shprtcut:name "Marie"^^xsd:string.
+
+<http://ns.inria.fr/Simon> a shortcut:man,
+shprtcut:name "Simon"^^xsd:string.
+
+<http://ns.inria.fr/Alice> a shortcut:woman, a shortcut:teacher,
+shprtcut:name "Alice"^^xsd:string.
+
+<http://ns.inria.fr/Pierre> a shortcut:man, a shortcut:teacher,
+shprtcut:name "Pierre"^^xsd:string.
