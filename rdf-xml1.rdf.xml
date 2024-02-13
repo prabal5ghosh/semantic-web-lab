@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://inria.fr/schema#">
+<rdf:Description rdf:about="http://inria.fr/data#Margot">
+    <rdf:type rdf:resource="http://inria.fr/schema#woman"/>
+    <rdf:type rdf:resource="http://inria.fr/schema#teacher"/>
+    <ns0:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ns0:age>
+    <ns0:shoesize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</ns0:shoesize>
+    <ns0:pantsize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</ns0:pantsize>
+    <ns0:hasSpouse>
+      <ns0:man rdf:about="http://ns.inria.fr/Arthur">
+        <ns0:haschild rdf:resource="http://ns.inria.fr/Simon"/>
+        <ns0:haschild rdf:resource="http://ns.inria.fr/Marie"/>
+        <ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</ns0:name>
+      </ns0:man>
+    </ns0:hasSpouse>
+<ns0:haschild rdf:resource="http://ns.inria.fr/Simon"/>
+    <ns0:haschild rdf:resource="http://ns.inria.fr/Marie"/>
+    <ns0:mother>
+      <ns0:woman rdf:about="http://ns.inria.fr/Simone">
+        <ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simone</ns0:name>
+      </ns0:woman>
+    </ns0:mother>
+<ns0:colleagues>
+      <ns0:woman rdf:about="http://ns.inria.fr/Alice">
+        <rdf:type rdf:resource="http://inria.fr/schema#teacher"/>
+        <ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</ns0:name>
+      </ns0:woman>
+    </ns0:colleagues>
+<ns0:colleagues>
+      <ns0:man rdf:about="http://ns.inria.fr/Pierre">
+        <rdf:type rdf:resource="http://inria.fr/schema#teacher"/>
+        <ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pierre</ns0:name>
+      </ns0:man>
+    </ns0:colleagues>
+<ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">margot</ns0:name>
+  </rdf:Description>
+<ns0:woman rdf:about="http://ns.inria.fr/Marie">
+    <ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marie</ns0:name>
+  </ns0:woman>
+<ns0:man rdf:about="http://ns.inria.fr/Simon">
+    <ns0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon</ns0:name>
+  </ns0:man>
+</rdf:RDF>
