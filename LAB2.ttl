@@ -1,0 +1,79 @@
+# Margot is a 32 years old woman, her shoe size is 38 and her pants size is 40. She is married 
+# to Arthur, with whom she has two children: Simon and Marie. Margot is a teacher; Alice and 
+# Pierre are her colleagues. Her mother is called Simone.
+
+@prefix : <http://prabal.fr/schema#> .
+@prefix shortcut: <http://prabal.fr/data#> .
+@base <http://prabal.fr/data> .
+
+
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+
+# class
+
+shortcut:Person a rdfs:Class ;
+    rdfs:label "Person"^^xsd:string .
+
+shortcut:woman a rdfs:Class ;
+	rdfs:subClassOf shortcut:Person.
+
+shortcut:man a rdfs:Class ;
+	rdfs:subClassOf shortcut:Person.
+
+
+
+
+
+# property
+
+shortcut:parent a rdf:Property  ;
+	rdfs:domain shortcut:Person ;
+	rdfs:range shortcut:Person .
+
+shortcut:name a rdf:Property  ;
+	rdfs:domain shortcut:Person ;
+	rdfs:label "name"@en;
+	rdfs:range xsd:string .
+
+shortcut:age a rdf:Property ;
+    # rdfs:domain :Person;
+    rdfs:label "age"@en ;
+    rdfs:range xsd:integer .
+
+shortcut:shoesize a rdf:Property;
+    # rdfs:domain :Person;
+    rdfs:label "shoesize"@en;
+    rdfs:range xsd:integer .
+
+
+shortcut:pantsize a rdf:Property;
+    # rdfs:domain :Person;
+    rdfs:label "pantsize"@en;
+    rdfs:range xsd:integer .
+
+shortcut:hasSpouse a rdf:Property;
+    rdfs:domain shortcut:Person;
+    rdfs:label "hasSpouse"@en;
+    rdfs:range shortcut:Person .
+
+shortcut:haschild a rdf:Property;
+    rdfs:domain shortcut:Person;
+    rdfs:label "haschild"@en;
+    rdfs:range shortcut:Person .
+
+shortcut:mother a rdf:Property;
+    rdfs:domain shortcut:Person;
+    rdfs:label "hasMother"@en;
+    rdfs:range shortcut:Person .
+
+shortcut:colleagues a rdf:Property;
+    rdfs:domain shortcut:Person;
+    rdfs:label "colleagues"@en;
+    rdfs:range shortcut:Person .
+
+

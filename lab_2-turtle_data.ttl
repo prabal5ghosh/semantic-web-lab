@@ -1,0 +1,43 @@
+#Individuals
+@prefix : <http://inria.fr/schema#> .
+@prefix shortcut: <http://inria.fr/data#> .
+@base <http://inria.fr/data> .
+
+
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:Margot a shortcut:woman, shortcut:teacher;
+shortcut:age "32"^^xsd:integer;
+shortcut:shoesize "38"^^xsd:integer;
+shortcut:pantsize "40"^^xsd:integer;
+shortcut:hasSpouse :Arthur;
+shortcut:haschild  :Simon;
+shortcut:haschild  :Marie;
+shortcut:mother :Simone;
+shortcut:colleagues :Alice;
+shortcut:colleagues :Pierre;
+shortcut:name "margot"^^xsd:string.
+
+:Arthur a shortcut:man;
+shortcut:haschild  :Simon;
+shortcut:haschild  :Marie;
+shortcut:name "Arthur"^^xsd:string.
+
+:Simone a shortcut:woman;
+shortcut:name "simone"^^xsd:string.
+
+:Marie a shortcut:woman;
+shortcut:name "Marie"^^xsd:string.
+
+:Simon a shortcut:man;
+shortcut:name "Simon"^^xsd:string.
+
+:Alice a shortcut:woman,  shortcut:teacher;
+shortcut:name "Alice"^^xsd:string.
+
+:Pierre a shortcut:man,  shortcut:teacher;
+shortcut:name "Pierre"^^xsd:string.
